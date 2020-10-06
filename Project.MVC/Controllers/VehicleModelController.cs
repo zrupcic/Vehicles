@@ -73,7 +73,7 @@ namespace Project.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,MakeID,Name,Abrv")] VehicleModel vehicleModel)
+        public async Task<ActionResult> Create(VehicleModel vehicleModel)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +105,7 @@ namespace Project.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,MakeID,Name,Abrv")] VehicleModel vehicleModel)
+        public async Task<ActionResult> Edit(VehicleModel vehicleModel)
         {
             if (ModelState.IsValid)
             {
